@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: Black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 10px 20px;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: white;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Nav links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: White; 
+        }
+        h1 {
+            color:White;
+        }
+        h3 {
+            color:White;
+        }
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #333;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/artists">Artists</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h1>About The Artists</h2>
+    
+    <a href= "https://open.spotify.com/artist/5274obTQJjzjyycRyJlfml">
+
+        <img class="img-rounded thumbnail"
+            src="https://images.squarespace-cdn.com/content/v1/55f9ade5e4b0fceefecad5ec/e7030431-d4f2-4fb6-8455-f325c2c70d98/unnamed+%2828%29.jpg"
+            alt="Whitechapel" loading="lazy" title="Whitechapel" width="150px" height="150px">
+
+    </a>
+
+    <a href= "https://open.spotify.com/artist/165ZgPlLkK7bf5bDoFc6Sb">
+
+        <img class="img-rounded thumbnail"
+            src="https://m.media-amazon.com/images/M/MV5BNjY0ZTcwODAtMzU4ZS00ZjhiLWFiNWItYjU0ZDk3ODI1YjUyXkEyXkFqcGc@._V1_.jpg"
+            alt="Limp Bizkit" loading="lazy" title="Limp Bizkit" width="150px" height="150px">
+
+    </a>
+    <a href= "https://open.spotify.com/artist/7wAui81GNoee0LLmayVllo">
+
+        <img class="img-rounded thumbnail"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcTIeA7RMpqAvDrGvBecTqbYPZXat970zZWg&s"
+            alt="Backyard Savagery" loading="lazy" title="Backyard Savagery" width="150px" height="150px">
+
+    </a>
+    <a href= "https://open.spotify.com/artist/34PPy9Ut9m8qB8BnmCiVmO">
+
+        <img class="img-rounded thumbnail"
+            src="https://f4.bcbits.com/img/0004195790_10.jpg"
+            alt="Mortician" loading="lazy" title= "Mortician" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/1pBeRGeBHNPLy95LswDViS">
+
+        <img class="img-rounded thumbnail"
+            src="https://i.ytimg.com/vi/XEf6_TG7ONA/maxresdefault.jpg"
+            alt="Sunami" loading="lazy" title="Sunami" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/17Mb968quDHpjCkIyq30QV">
+
+        <img class="img-rounded thumbnail"
+            src="https://images.squarespace-cdn.com/content/v1/56e6ecf462cd94e26a2938c4/1599802596878-DBWVUHAA0ZAQ4984TL9F/Hatebreed_BandThumbnail_FB_02.jpg"
+            alt="Hatebreed" loading="lazy" title="Hatebreed" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/5eAWCfyUhZtHHtBdNk56l1">
+
+        <img class="img-rounded thumbnail"
+            src="https://i.ytimg.com/vi/i8Afui6ubCU/maxresdefault.jpg"
+            alt="System Of A Down" loading="lazy" title="System Of A Down" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/1E4r4z7ivGUcSAnCbINJ9v">
+
+        <img class="img-rounded thumbnail"
+            src="https://i.scdn.co/image/ab6761610000e5eb8e1fd2edd60eca082928130a"
+            alt="Drowning Pool" loading="lazy" title= "Drowning Pool" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/3FILKvtNoiEfCJO9qVNCNF">
+
+        <img class="img-rounded thumbnail"
+            src="https://yt3.googleusercontent.com/k2tnMa3gsY8r_J2IP6kC0w0kCrHPOqBFKY97bFufAXyM51GSwD6PpeSHQw8jzuSN6KtWhtKm=s900-c-k-c0x00ffffff-no-rj"
+            alt="Nekrogoblikon" loading="lazy" title="Nekrogoblikon" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/7JDSHlDdVTo7aZKdQZ53Vf">
+
+        <img class="img-rounded thumbnail"
+            src="https://townsquare.media/site/366/files/2020/05/Static-X.jpg?w=780&q=75"
+            alt="Static-X" loading="lazy" title="Static-X" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/0GDGKpJFhVpcjIGF8N6Ewt">
+
+        <img class="img-rounded thumbnail"
+            src="https://twistedthread.co.nz/cdn/shop/articles/Gojira_b4ce6a3a-27e5-4d69-807c-44dec77ad9ab.jpg?v=1676269398"
+            alt="Gojira" loading="lazy" title="Gojira" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/artist/298H8XdYsBHii98wfAZT1S">
+
+        <img class="img-rounded thumbnail"
+            src="https://yt3.googleusercontent.com/VUZepusQ41OOtVMjZcJMVSv5kCkvqJsUcMxmU9LN2FcyJpEgB2lmxq4Qnu8Ki_bXiIMwdchN_A=s900-c-k-c0x00ffffff-no-rj"
+            alt="Violent Vira" loading="lazy" title="Violent Vira" width="150px" height="150px">
+
+    </a>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

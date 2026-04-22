@@ -1,20 +1,234 @@
+<!-- The technique I chose was a viewport media tag. I implemented it by adding it to the head and it gets the device width, and changed how the website looks based on what device your on. -->
+<!--
+TYPOGRAPHY:
+- What Google Fonts did you choose and why? Pirata One and UnifrakturMaguntia because I thought both of them looked good.
+- How do they complement each other (font pairing)? They're both easy to read and kinda of look similar.
+- What font weights did you use? 400
+- How did you make your typography responsive? Adding a @media in the style.css
+ 
+IMAGES:
+- How did you optimize your images? Changing the sizes.
+- What file types did you use and why? Jpegs, pngs, multiple of them.
+- How did you ensure your images are responsive? By making the size of the page thinner, so it is like I was on a phone.
+ 
+RESPONSIVE DESIGN:
+- What specific techniques did you use? Hamburger navbars.
+- Where can these changes be seen on your site? On the very top with the navbar.
+-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: Black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 10px 20px;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: white;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Nav links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: White;
+        }
+
+        h3 {
+            color: White;
+        }
+
+        h1 {
+            color: White;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #333;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </nav>
-<hr>
-<h1>Welcome to My Website</h1>
 
-<p>This is my homepage.</p>
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/artists">Artists</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h1>Welcome to Vibify</h1>
+    <h3>These are the almbums btw.</h3>
+    <h2>Deathcore</h2>
+    <a href="https://open.spotify.com/album/2BG0B4ZOL2m4JWkMhsp3Nq">
+        <img class="img-rounded thumbnail" src="https://f4.bcbits.com/img/a2446731508_10.jpg"
+            alt="Chainsaw Dismemberment" loading="lazy" title="Chainsaw Dismemberment" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/album/7lnkxd7w0YcE18CZ6COEJj">
+
+        <img class="img-rounded thumbnail" src="https://upload.wikimedia.org/wikipedia/en/d/d6/Hymns_In_Dissonance.jpeg"
+            alt="Hymns In Dissonance" loading="lazy" title="Hymns In Dissonance" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/album/5mxTv5Ncj11jkjAjBYM7Dc">
+
+        <img class="img-rounded thumbnail"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/87/13/6b/87136b35-5632-5a33-7e99-61e8140bf7c7/859798674760_cover.jpg/486x486bb.png"
+            alt="Dismembered Gutted And Devoured" loading="lazy" title="Dismembered Gutted And Devoured" width="150px" height="150px">
+
+    </a>
+
+    <h2>Metal</h2>
+    <a href="https://open.spotify.com/album/4ldi4wEpZSlSw9DGE2Sx85">
+
+        <img class="img-rounded thumbnail" src="https://upload.wikimedia.org/wikipedia/en/3/30/Our_Endless_War.png"
+            alt="Let Me Burn" loading="lazy" title="Our Endless War" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/album/63AsIG0ig2p4mWx42ySWIj">
+
+        <img class="img-rounded thumbnail"
+            src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Concrete_Confessional.jpg"
+            alt="The Concrete Confessional" loading="lazy" title="The Concrete Confessional" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/album/4KNGq1S6mYvEgz0xgpkiRz">
+
+        <img class="img-rounded thumbnail" src="https://f4.bcbits.com/img/a1709940096_16.jpg" alt="Welcome To Bonkers"
+             alt ="Welcome To Bonkers" loading="lazy" title="Welcome To Bonkers" width="150px" height="150px">
+
+    </a>
+    <h2>Heavy Metal</h2>
+    <a href="https://open.spotify.com/album/6jWde94ln40epKIQCd8XUh">
+
+        <img class="img-rounded thumbnail"
+            src="https://upload.wikimedia.org/wikipedia/en/6/64/SystemofaDownToxicityalbumcover.jpg"
+             alt ="Toxicity" loading="lazy" title="Toxicity" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/album/7D7V6M05UIOTjLdqbwRX0w">
+
+        <img class="img-rounded thumbnail"
+            src="https://upload.wikimedia.org/wikipedia/en/4/42/Gojira_magma_artwork.jpg"
+             alt ="Magma" loading="lazy" title="Magma" width="150px" height="150px">
+
+    </a>
+    <h2>Punk Metal</h2>
+    <a href="https://open.spotify.com/album/3HCCUaRSjHSFOe4fqE0BiP">
+
+        <img class="img-rounded thumbnail" src="https://m.media-amazon.com/images/I/81GTu6740XL._UF1000,1000_QL80_.jpg"
+            alt="Signifigant Other" loading="lazy" title="Signifigant Other" width="150px" height="150px">
+
+    </a>
+    <a href="https://open.spotify.com/album/0LFwFu1urEPuu4d9rxF6vx">
+
+        <img class="img-rounded thumbnail" src="https://f4.bcbits.com/img/a2234684642_16.jpg" alt="Demonstration"
+            title="Demonstration" loading="lazy" width="150px" height="150px">
+
+    </a>
+    <h2>Nu Metal</h2>
+    <a href="https://open.spotify.com/album/089oyV5caclve3ap934iRw">
+
+        <img class="img-rounded thumbnail" src="https://upload.wikimedia.org/wikipedia/en/4/4f/DrowningpoolsinnerAP.JPG"
+            alt="Sinner" loading="lazy" title="Sinner" width="150px" height="150px">
+
+    </a>
+    <h2>Industrial Metal</h2>
+    <a href="https://open.spotify.com/album/2WRLwr5MIIXr9gAWOOQ6J5">
+
+        <img class="img-rounded thumbnail" src="https://m.media-amazon.com/images/I/91VEPvpDtaL._UF1000,1000_QL80_.jpg"
+            alt="Wisconsin Death Trip" loading="lazy" title="Wisconsin Death Trip" width="150px" height="150px">
+
+    </a>
+    <h2>Melodic Metal</h2>
+    <a href="https://open.spotify.com/album/4HM2Cd3zXHgiRVrdpV1Kwr">
+
+        <img class="img-rounded thumbnail" src="https://m.media-amazon.com/images/I/71lFBjFxU2L._UF1000,1000_QL80_.jpg"
+            alt="Lover Of A Ghost" loading="lazy" title="Lover Of A Ghost" width="150px" height="150px">
+
+    </a>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 
 </body>
 
