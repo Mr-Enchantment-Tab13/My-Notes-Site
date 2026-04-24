@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: fadeIn 1s ease-in;
 }
 
 .nav-links {
@@ -253,5 +254,23 @@ h1 {
 @media (max-width: 600px) {
   h1 {
     font-size: 1.8rem;
+  }
+}
+:root {
+  --primary-color: Black;
+  --secondary-color: DarkRed;
+  --spacing: 16px;
+  --main-font: Arial, serif;
+}
+body {
+  font-family: var(--main-font);
+  background-color: var(--secondary-color);
+}
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
   }
 }
